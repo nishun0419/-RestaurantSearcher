@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>RestaurantSercher</title>
+    <link href="css/stylesheet.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+      <div class="loadingback">
+      <img src="image/load.gif">          <!--画像提供元 : http://wordpress.ideacompo.com/?p=4666 -->
+      </div>
+      <div class="page-header">
+        <h1>RestaurantSercher</h1>
+        <p>~レストラン検索サービス~</p>
+      </div>
+      <div class="serachbox">
+      <span>
+      <input type="text" id="Freeword" placeholder="&#9998;キーワードを入力してください">
+      </span>
+      <span class="selectrange">
+      <label>検索半径</label>
+          <select name="range" class="range" onChange="Serachrange(this);">
+            <option value="1">300</option>
+            <option value="2">500</option>
+            <option value="3">1000</option>
+            <option value="4">2000</option>
+            <option value="5">3000</option>
+          </select>メートル
+      </span>
+      <span>
+          <button type="button" class="btn btn-success Serach" type="button">検索</button>
+      </span>
+      </div>
+      <p id="total">
+      </p>
+       <div class="paging">
+        <p>
+        <input type='button' value='<<' class='back'>
+        <select name="currentpage" class="currentpage" onChange="Serachcurrent(this);"></select>ページ/<span class="totalpoint"></span>ページ
+        <input type='button' value='>>' class='next'>
+        </p>
+      </div>
+      <div class="Dispnull">他のキーワードで検索してください</div>
+      <div id="result">
+      </div>
+      <div class="paging">
+        <p>
+        <input type='button' value='<<' class='back'>
+        <select name="currentpage" class="currentpage" onChange="Serachcurrent(this);"></select>ページ/<span class="totalpoint"></span>ページ
+        <input type='button' value='>>' class='next'>
+        </p>
+      </div>
+    <script src="js/ClickEvent.js"></script>
+    <script src="js/DispResult.js"></script>
+    <script src="js/Paging.js"></script>
+    <script src="js/Search.js"></script>
+    <script src="js/Map.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrPF_PJ5nFAKmYx2k7-Cpxxptq9FVdejs&v=3.24"></script>
+
+  </body>
+</html>
